@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NewsApi</string>
+    <string name="website">Website</string>
+    <string name="title">Title</string>
+    <string name="news_site">News site</string>
+    <string name="summary">Summary</string>
+    <string name="back">Back</string>
+</resources>
