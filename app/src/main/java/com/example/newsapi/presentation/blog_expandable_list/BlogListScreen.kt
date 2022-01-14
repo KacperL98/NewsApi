@@ -13,7 +13,7 @@ import androidx.navigation.NavController
 import com.example.newsapi.presentation.blog_expandable_list.components.ExpandableList
 
 @Composable
-fun NetworkScreen(
+fun BlogListScreen(
     navController: NavController,
     viewModel: BlogsListViewModel = hiltViewModel(),
 ) {

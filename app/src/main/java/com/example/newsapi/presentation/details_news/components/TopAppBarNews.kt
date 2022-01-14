@@ -13,7 +13,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavController
 import com.example.newsapi.R
 import com.example.newsapi.navigation.screen.BottomNavItem
-import com.example.newsapi.navigation.screen.Screen
 import com.example.newsapi.ui.spacing
 import com.example.newsapi.ui.theme.Blue
 
@@ -25,7 +24,7 @@ fun TopAppBarNews(navController: NavController) {
             Text(text = stringResource(id = R.string.back), style = MaterialTheme.typography.h6, color = Color.White)
         },
         navigationIcon = {
-            IconButton(onClick = {navController.navigate(BottomNavItem.Home.screen_route)}) {
+            IconButton(onClick = {navController.navigate(BottomNavItem.NewsList.screen_route)}) {
                 Icon(Icons.Filled.ArrowBack, "backIcon")
             }
         },

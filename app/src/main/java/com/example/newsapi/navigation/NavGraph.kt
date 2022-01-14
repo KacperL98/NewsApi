@@ -8,16 +8,15 @@ import androidx.navigation.compose.composable
 import com.example.newsapi.navigation.screen.BottomNavItem
 import com.example.newsapi.navigation.screen.Screen
 import com.example.newsapi.presentation.blog_expandable_list.BlogsListViewModel
-import com.example.newsapi.presentation.blog_expandable_list.NetworkScreen
+import com.example.newsapi.presentation.blog_expandable_list.BlogListScreen
 import com.example.newsapi.presentation.details_news.FinalSpaceDetailsScreen
 import com.example.newsapi.presentation.news_list.NewsDetailsScreen
-import com.example.newsapi.presentation.news_list.NewsListViewModel
 
 @ExperimentalMaterialApi
 @Composable
-fun NavigationGraph(navController: NavHostController, newsListViewModel: NewsListViewModel, blogsListViewModel: BlogsListViewModel) {
-    NavHost(navController, startDestination = BottomNavItem.Home.screen_route) {
-        composable(BottomNavItem.Home.screen_route) {
+fun NavigationGraph(navController: NavHostController, blogsListViewModel: BlogsListViewModel) {
+    NavHost(navController, startDestination = BottomNavItem.NewsList.screen_route) {
+        composable(BottomNavItem.NewsList.screen_route) {
             NewsDetailsScreen(navController)
         }
         composable(
@@ -25,8 +24,8 @@ fun NavigationGraph(navController: NavHostController, newsListViewModel: NewsLis
         ) {
             FinalSpaceDetailsScreen(navController)
         }
-        composable(BottomNavItem.MyNetwork.screen_route) {
-            NetworkScreen(navController, blogsListViewModel)
+        composable(BottomNavItem.BlogsList.screen_route) {
+            BlogListScreen(navController, blogsListViewModel)
         }
     }
 }

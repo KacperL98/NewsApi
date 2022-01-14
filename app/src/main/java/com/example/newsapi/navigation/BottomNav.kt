@@ -17,8 +17,8 @@ import com.example.newsapi.ui.theme.Blue
 @Composable
 fun BottomNavigation(navController: NavController) {
     val items = listOf(
-        BottomNavItem.Home,
-        BottomNavItem.MyNetwork,
+        BottomNavItem.NewsList,
+        BottomNavItem.BlogsList,
     )
 
     BottomNavigation(

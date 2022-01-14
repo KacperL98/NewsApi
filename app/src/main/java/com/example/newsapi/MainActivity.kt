@@ -46,8 +46,7 @@ class MainActivity() : ComponentActivity() {
                     ) {
                         NavigationGraph(
                             navController = navController,
-                            newsListViewModel,
-                            blogsListViewModel
+                            blogsListViewModel = blogsListViewModel
                         )
                     }
                 }
